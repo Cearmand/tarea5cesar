@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Horas extras</title>
+</head>
+<body>
+    <form class="form" calaction="datos.js">
+        <h2 class="form_title">Calculo de<br> Horas Extras</h2>
+            <button onclick="horas_ext()" class="form_submit">Calcular</button>
+            <h3 id="calculo_hora"></h3>
+        </div>
+    </form>
+    <script>
+        let form = document.querySelector("form")
+    form.addEventListener("submit",horas_ext)
+    function horas_ext(e) {
+    e.preventDefault()
+    let horas
+    let cent
+    let suma=0
+    let mostrar=document.getElementById("calculo_hora")
+    do {
+        horas=parseFloat(prompt("Ingrese las horas extras trabajadas: "))
+        if (horas>=0) {
+            suma+=horas
+        cent= prompt("Desea ingresar otra hora extra? Si=S / No=N")
+        } else {
+            mostrar.innerText='Coloco la hora en negativo.'
+        }
+    } while (Object.is(cent,'S'));
+    mostrar.innerText='Horas sumadas: '+suma
+}
+    </script>
+</body>
+</html>

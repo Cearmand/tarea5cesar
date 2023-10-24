@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Suma y promedio Salarios</title>
+</head>
+<body>
+    <form class="form" calaction="datos.js">
+        <h2 class="form_title">Suma y promedio <br> Salarios</h2>
+            <button onclick="cant_emple()" class="form_submit">Calcular</button>
+            <h3 id="Calculo_mostrar"></h3>
+    </form>
+    <script>
+    let form = document.querySelector("form")
+    form.addEventListener("submit",cant_emple)
+    function cant_emple(e) {
+    e.preventDefault()
+    let sal
+    let suma=0
+    let emple=parseFloat(prompt("Ingrese la cantidad de empleados: "))
+    for (let i = 1; i <=emple; i++) {
+        sal=parseFloat(prompt(i+". Ingrese el salario del empleado: "))
+        suma+=sal
+    }
+    let mostrar=document.getElementById("Calculo_mostrar")
+    mostrar.innerText='Sumatoria de salarios: Q'+suma+'\nPromedio de salarios: Q'+(suma/emple)
+}
+    </script>
+</body>
+</html>

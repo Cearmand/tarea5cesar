@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario total</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form class="form" calaction="datos.js">
+        <h2 class="form_title">Calculo del Salario <br>y <br>Boleto de Ornato</h2>
+        <div class="form_container">
+            <input type="submit" class="form_submit" value="Ir" onclick="redi()">
+        </div>
+        
+    </form>
+    <form class="form" calaction="datos.js">
+        <h2 class="form_title"> Suma de Salarios <br>de empleados</h2>
+        <div class="form_container">
+            <input type="submit" class="form_submit" value="Ir" onclick="redirec()">
+        </div>
+        
+    </form>
+    <form class="form" calaction="datos.js">
+        <h2 class="form_title">Calculo de <br> horas extras</h2>
+        <div class="form_container">
+            <input type="submit" class="form_submit" value="Ir" onclick="redirec_hora()">
+        </div>
+    </form>
+    <script type="text/javascript">
+        function redi(){
+            window.open("salario.html",'_blank')
+        }
+        function redirec(){
+            window.open("cant_emple.html",'_blank')
+        }
+        function redirec_hora(){
+            window.open("horasx.html",'_blank')
+        }
+    </script>
+</body>
+</html>
